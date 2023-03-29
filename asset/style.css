@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+html {
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1c28;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.dropdown {
+    width: 100%;
+    max-width: 47.5rem;
+    margin: 5rem auto;
+    position: relative;
+}
+
+.dropdown:hover .dropdown__list{
+    display: block;
+}
+
+.dropdown__select {
+    width: 100%;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdown__list {
+    margin-top: 2.5rem;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.dropdown__list::before {
+    content: "";
+    height: 2.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+}
+
+.dropdown__item {
+    padding: 3rem;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.dropdown__item:first-child {
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.dropdown__item:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    transform: translateY(-100%);
+    transition: border-bottom-color 0.2s linear;
+}
+
+.dropdown__item:first-child:hover::before {
+    border-bottom-color: #f0f2f5;
+    
+}
+
+.dropdown__item:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+
+.dropdown__item:hover {
+    background-color: #f0f2f5;
+}
